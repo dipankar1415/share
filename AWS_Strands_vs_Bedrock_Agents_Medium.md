@@ -1,12 +1,8 @@
 # AWS Strands Agents vs Amazon Bedrock Agents: A Comparative Analysis
 
-*Based on Real-World Customer Interactions*
-
----
-
 ## Introduction
 
-In the rapidly evolving world of AI agents, AWS has introduced **AWS Strands Agents**, a new approach to building intelligent agent systems. This article compares AWS Strands Agents with the existing **Amazon Bedrock Agents**, highlighting their similarities, differences, pros, and cons based on real-world customer interactions.
+In the rapidly evolving world of AI agents, AWS has introduced **AWS Strands Agents**, a new approach to building intelligent agent systems. This article compares AWS Strands Agents with the existing **Amazon Bedrock Agents**, highlighting their similarities, differences, pros, and cons.
 
 ## The End Goal of Agents
 
@@ -30,8 +26,6 @@ LLMs don't have real-time data or AWS account access by default. Agents need to 
 4. Tool 4: List S3 buckets using AWS credentials
 
 Both solutions use this tool-based approach, but they differ significantly in implementation.
-
----
 
 ## Amazon Bedrock Agents
 
@@ -234,6 +228,7 @@ In a real-world demonstration:
 - **Use the right tool for the right job**
 - Strands significantly reduces development time
 - Bedrock Agents provide more managed services
+
 
 
 
