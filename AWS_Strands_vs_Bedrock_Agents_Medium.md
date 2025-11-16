@@ -235,9 +235,6 @@ In a real-world demonstration:
 - Strands significantly reduces development time
 - Bedrock Agents provide more managed services
 
----
 
-*Code available on GitHub (upon request)*
 
-*Based on real-world customer interactions*
 
