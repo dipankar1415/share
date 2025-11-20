@@ -1,0 +1,61 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo Logging in to Amazon ECR...
+      - aws --version
+      - echo Build started on `date`
+      - echo Entering pre_build phase...
+      - |
+        if [ -f requirements.txt ]; then
+          echo Installing Python dependencies...
+          pip install -r requirements.txt
+        fi
+      - echo Pre-build phase completed
+
+  build:
+    commands:
+      - echo Build started on `date`
+      - echo Entering build phase...
+      - |
+        echo "Creating deployment package..."
+        mkdir -p deploy_package
+        if [ -d "src" ]; then
+          cp -r src deploy_package/
+        fi
+        if [ -f "requirements.txt" ]; then
+          cp requirements.txt deploy_package/
+        fi
+        cp appspec.yml deploy_package/
+        if [ -d "scripts" ]; then
+          mkdir -p deploy_package/scripts
+          cp scripts/* deploy_package/scripts/ 2>/dev/null || true
+        fi
+        echo "Deployment package created successfully"
+      - |
+        echo "Creating archive..."
+        cd deploy_package
+        zip -r ../celery-file-watcher-deploy.zip .
+        cd ..
+        echo "Archive created: celery-file-watcher-deploy.zip"
+      - echo Build phase completed
+
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - echo "Build artifacts:"
+      - ls -lh *.zip 2>/dev/null || echo "No zip files found"
+      - echo Post-build phase completed
+
+artifacts:
+  files:
+    - celery-file-watcher-deploy.zip
+    - appspec.yml
+  name: celery-file-watcher-artifacts
+  base-directory: .
+
+cache:
+  paths:
+    - '/root/.cache/pip/**/*'
+

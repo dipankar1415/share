@@ -1,0 +1,47 @@
+version: 0.0
+os: linux
+
+files:
+  - source: /
+    destination: /opt/celery-file-watcher
+
+permissions:
+  - object: /opt/celery-file-watcher
+    pattern: "**"
+    owner: root
+    group: root
+    mode: 755
+    type:
+      - file
+      - directory
+
+# Note: Deployment hooks require scripts/ directory with executable scripts
+# If scripts are not present, only file deployment will occur
+# To enable full deployment lifecycle, uncomment hooks below and add scripts:
+#   - scripts/before_install.sh
+#   - scripts/after_install.sh
+#   - scripts/application_start.sh
+#   - scripts/application_stop.sh
+#   - scripts/validate_service.sh
+
+# hooks:
+#   BeforeInstall:
+#     - location: scripts/before_install.sh
+#       timeout: 300
+#       runas: root
+#   AfterInstall:
+#     - location: scripts/after_install.sh
+#       timeout: 300
+#       runas: root
+#   ApplicationStart:
+#     - location: scripts/application_start.sh
+#       timeout: 300
+#       runas: root
+#   ApplicationStop:
+#     - location: scripts/application_stop.sh
+#       timeout: 300
+#       runas: root
+#   ValidateService:
+#     - location: scripts/validate_service.sh
+#       timeout: 300
+#       runas: root
