@@ -29,3 +29,8 @@ This dashboard is built with Panel and Bokeh to explore sales KPIs with interact
 - For large CSVs, consider sampling or pre-aggregating before serving.
 
 N.B: Internal note: taken for non aws project
+
+## Dashboard Preview
+Below is a preview of how the Sales KPI Dashboard looks:
+
+![Sales KPI Dashboard](images/dashboard.png)
