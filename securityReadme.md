@@ -126,3 +126,299 @@ A **cipher suite** is not a single algorithm like "RSA 256". Instead, it's a **c
 - **Why:** Asymmetric encryption is computationally expensive; symmetric is much faster for data transfer
 
 **Key Insight:** Asymmetric encryption secures the initial key exchange, then symmetric encryption handles all actual data transmission for performance.
+
+---
+
+## OSI Model: The 7-Layer Network Architecture
+
+**Overview:** The OSI (Open Systems Interconnection) model is a conceptual framework that standardizes the functions of a telecommunication or computing system into seven abstraction layers. It helps understand how data flows from an application on one device to an application on another device across a network.
+
+### The 7 Layers of OSI Model
+
+```
+┌─────────────────────────────────────────────────────────────┐
+│ Layer 7: Application Layer                                  │
+│  (HTTP, HTTPS, SMTP, FTP, DNS, SSH, Telnet)                 │
+├─────────────────────────────────────────────────────────────┤
+│ Layer 6: Presentation Layer                                 │
+│  (SSL/TLS, Encryption, Compression, Data Formatting)       │
+├─────────────────────────────────────────────────────────────┤
+│ Layer 5: Session Layer                                      │
+│  (Session Management, Authentication, Authorization)       │
+├─────────────────────────────────────────────────────────────┤
+│ Layer 4: Transport Layer                                    │
+│  (TCP, UDP, Port Numbers, Flow Control, Error Recovery)     │
+├─────────────────────────────────────────────────────────────┤
+│ Layer 3: Network Layer                                      │
+│  (IP, ICMP, Routers, IP Addressing, Routing)               │
+├─────────────────────────────────────────────────────────────┤
+│ Layer 2: Data Link Layer                                   │
+│  (Ethernet, MAC Addresses, Switches, Frames)               │
+├─────────────────────────────────────────────────────────────┤
+│ Layer 1: Physical Layer                                    │
+│  (Cables, Hubs, Bits, Electrical Signals, Radio Waves)     │
+└─────────────────────────────────────────────────────────────┘
+```
+
+### Detailed Layer Descriptions
+
+#### Layer 7: Application Layer
+
+**Purpose:** Provides network services directly to user applications.
+
+**Functions:**
+
+- User interface for network services
+- Application-specific protocols
+- Data formatting and presentation to users
+
+**Protocols & Examples:**
+
+- **HTTP/HTTPS:** Web browsing
+- **SMTP:** Email sending
+- **FTP:** File transfer
+- **DNS:** Domain name resolution
+- **SSH:** Secure remote access
+- **Telnet:** Remote terminal access
+
+**Data Unit:** Message/Data
+
+**Example:** When you type `https://example.com` in a browser, the Application layer formats the HTTP request.
+
+---
+
+#### Layer 6: Presentation Layer
+
+**Purpose:** Translates, encrypts, and compresses data for the Application layer.
+
+**Functions:**
+
+- Data translation (e.g., ASCII to EBCDIC)
+- Data encryption/decryption
+- Data compression/decompression
+- Character encoding (UTF-8, ASCII)
+
+**Protocols & Examples:**
+
+- **SSL/TLS:** Encryption (part of HTTPS)
+- **JPEG, PNG, GIF:** Image encoding
+- **MPEG, AVI:** Video encoding
+- **ASCII, Unicode:** Text encoding
+
+**Data Unit:** Formatted Data
+
+**Example:** TLS encryption happens at this layer, converting plain HTTP into encrypted HTTPS.
+
+---
+
+#### Layer 5: Session Layer
+
+**Purpose:** Establishes, manages, and terminates sessions between applications.
+
+**Functions:**
+
+- Session establishment, maintenance, and termination
+- Dialog control (full-duplex, half-duplex)
+- Synchronization checkpoints
+- Session recovery
+
+**Protocols & Examples:**
+
+- **NetBIOS:** Network Basic Input/Output System
+- **RPC:** Remote Procedure Call
+- **PPTP:** Point-to-Point Tunneling Protocol
+- **SQL:** Database sessions
+
+**Data Unit:** Session Data
+
+**Example:** Managing a login session - establishing connection, maintaining it while active, and closing it when done.
+
+---
+
+#### Layer 4: Transport Layer
+
+**Purpose:** Provides end-to-end data transfer services between applications.
+
+**Functions:**
+
+- Segmentation and reassembly of data
+- Connection-oriented (TCP) or connectionless (UDP) communication
+- Flow control
+- Error detection and recovery
+- Port addressing
+
+**Protocols & Examples:**
+
+- **TCP (Transmission Control Protocol):**
+  - Connection-oriented
+  - Reliable, ordered delivery
+  - Flow control and error recovery
+  - Used by HTTP, HTTPS, FTP, SSH
+- **UDP (User Datagram Protocol):**
+  - Connectionless
+  - Fast, low overhead
+  - No guarantee of delivery
+  - Used by DNS, DHCP, streaming media
+
+**Data Unit:** Segments (TCP) or Datagrams (UDP)
+
+**Example:** TCP ensures all packets of a web page arrive in order and without errors. Port numbers (80 for HTTP, 443 for HTTPS) are used here.
+
+---
+
+#### Layer 3: Network Layer
+
+**Purpose:** Routes data packets from source to destination across multiple networks.
+
+**Functions:**
+
+- Logical addressing (IP addresses)
+- Routing (determining best path)
+- Packet forwarding
+- Fragmentation and reassembly
+
+**Protocols & Examples:**
+
+- **IP (Internet Protocol):** IPv4 and IPv6
+- **ICMP:** Internet Control Message Protocol (ping, traceroute)
+- **ARP:** Address Resolution Protocol
+- **RIP, OSPF, BGP:** Routing protocols
+
+**Devices:** Routers, Layer 3 Switches
+
+**Data Unit:** Packets
+
+**Example:** When sending data to `192.168.1.100`, the Network layer determines the routing path through routers.
+
+---
+
+#### Layer 2: Data Link Layer
+
+**Purpose:** Transfers data between nodes on the same network segment.
+
+**Functions:**
+
+- Physical addressing (MAC addresses)
+- Frame synchronization
+- Error detection (CRC)
+- Flow control
+- Media access control (MAC sublayer)
+
+**Protocols & Examples:**
+
+- **Ethernet:** Most common LAN protocol
+- **Wi-Fi (802.11):** Wireless networking
+- **PPP:** Point-to-Point Protocol
+- **Frame Relay:** WAN protocol
+- **VLAN:** Virtual LANs
+
+**Devices:** Switches, Bridges, Network Interface Cards (NICs)
+
+**Data Unit:** Frames
+
+**Example:** Ethernet frames contain MAC addresses (e.g., `00:1B:44:11:3A:B7`) to identify devices on the local network.
+
+---
+
+#### Layer 1: Physical Layer
+
+**Purpose:** Transmits raw bit stream over physical medium.
+
+**Functions:**
+
+- Physical connection between devices
+- Bit transmission (0s and 1s)
+- Signal encoding
+- Physical topology
+- Transmission rate
+
+**Components & Examples:**
+
+- **Cables:** Twisted pair (Cat5, Cat6), Coaxial, Fiber optic
+- **Connectors:** RJ-45, USB, SFP
+- **Hubs:** Physical layer repeaters
+- **Wireless:** Radio waves, infrared, Bluetooth
+- **Standards:** 1000BASE-T, 10GBASE-SR
+
+**Devices:** Hubs, Repeaters, Cables, Wireless Access Points
+
+**Data Unit:** Bits
+
+**Example:** Electrical signals on an Ethernet cable or radio waves in Wi-Fi represent binary data (0s and 1s).
+
+---
+
+### How Data Flows Through OSI Layers
+
+**Sending Data (Encapsulation):**
+
+```
+Application Data
+    ↓
++ Presentation Header (encryption, formatting)
+    ↓
++ Session Header (session info)
+    ↓
++ Transport Header (TCP/UDP, port numbers)
+    ↓
++ Network Header (IP addresses)
+    ↓
++ Data Link Header (MAC addresses) + Trailer (CRC)
+    ↓
++ Physical Layer (bits on wire)
+```
+
+**Receiving Data (Decapsulation):**
+
+```
+Physical Layer (bits from wire)
+    ↓
+- Data Link Header/Trailer
+    ↓
+- Network Header
+    ↓
+- Transport Header
+    ↓
+- Session Header
+    ↓
+- Presentation Header (decryption)
+    ↓
+Application Data
+```
+
+### OSI Model and HTTPS/TLS
+
+When you access `https://example.com`, here's how it maps to OSI layers:
+
+1. **Application (Layer 7):** HTTP request is created
+2. **Presentation (Layer 6):** TLS encrypts the HTTP data
+3. **Session (Layer 5):** TLS session is established and maintained
+4. **Transport (Layer 4):** TCP ensures reliable delivery on port 443
+5. **Network (Layer 3):** IP routes packets to destination server
+6. **Data Link (Layer 2):** Ethernet frames with MAC addresses
+7. **Physical (Layer 1):** Bits transmitted over cable or wireless
+
+### Mnemonics to Remember the Layers
+
+**From Top to Bottom:**
+
+- **All People Seem To Need Data Processing**
+- **Away Pizza Sausage Throw Not Do Please**
+
+**From Bottom to Top:**
+
+- **Please Do Not Throw Sausage Pizza Away**
+- **Physical Data Never Seems To Apply Properly**
+
+### OSI vs TCP/IP Model
+
+While OSI has 7 layers, the TCP/IP model (more commonly used in practice) has 4 layers:
+
+| TCP/IP Model   | OSI Model Layers                                |
+| -------------- | ----------------------------------------------- |
+| Application    | 7. Application<br>6. Presentation<br>5. Session |
+| Transport      | 4. Transport                                    |
+| Internet       | 3. Network                                      |
+| Network Access | 2. Data Link<br>1. Physical                     |
+
+**Key Takeaway:** The OSI model is a theoretical framework for understanding networking, while TCP/IP is the practical implementation used on the internet.
