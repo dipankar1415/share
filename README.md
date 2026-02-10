@@ -2,10 +2,28 @@
 
 This repository contains practical implementations and technical documentation across Agentic AI, MCP servers, AWS, Docker, and security.
 
-[![GitHub stars](https://img.shields.io/github/stars/dipankar1415/share)](https://github.com/dipankar1415/share)
-[![GitHub forks](https://img.shields.io/github/forks/dipankar1415/share)](https://github.com/dipankar1415/share)
-[![GitHub license](https://img.shields.io/github/license/dipankar1415/share)](https://github.com/dipankar1415/share)
-[![GitHub last commit](https://img.shields.io/github/last-commit/dipankar1415/share)](https://github.com/dipankar1415/share)
+![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=dipankar1415.share)
+![GitHub stars](https://img.shields.io/github/stars/dipankar1415/share?style=social)
+![GitHub forks](https://img.shields.io/github/forks/dipankar1415/share?style=social)
+![GitHub watchers](https://img.shields.io/github/watchers/dipankar1415/share?style=social)
+
+## Repository Statistics
+
+![Repo Stats](https://github-readme-stats.vercel.app/api/pin/?username=dipankar1415&repo=share&theme=radical&hide_border=true)
+
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=dipankar1415&repo=share&layout=compact&theme=radical&hide_border=true)
+
+## Activity Metrics
+
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=dipankar1415&show_icons=true&theme=radical&hide_border=true&include_all_commits=true)
+
+## Repository Info
+
+![Repo Size](https://img.shields.io/github/repo-size/dipankar1415/share)
+![Language](https://img.shields.io/github/languages/top/dipankar1415/share)
+![Last Commit](https://img.shields.io/github/last-commit/dipankar1415/share)
+![Open Issues](https://img.shields.io/github/issues/dipankar1415/share)
+![License](https://img.shields.io/github/license/dipankar1415/share)
 
 ---
 
