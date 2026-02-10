@@ -9,6 +9,10 @@ This repository contains practical implementations and technical documentation a
 
 ---
 
+**Featured:** [**AWS MCP Server is Working**](https://github.com/dipankar1415/share/blob/main/mcp/AWS_MCP_WORKING.md) — Claude Desktop connected to real AWS data via MCP. Ask "What's my EC2 cost?" and get live cost and infrastructure answers; API changes are handled by the MCP server.
+
+---
+
 ## agentic-ai
 
 Multi-agent stock analysis system using LangGraph: Stock Researcher, Market Data Collector, News Analyst, and Trading Advisor. Integrates Bright Data MCP for web scraping and OpenAI GPT-4o-mini for reasoning. Supervisor pattern for workflow orchestration.
@@ -43,6 +47,7 @@ Sales KPI dashboard with Panel and Bokeh: revenue, profit, units, filters, and t
 
 | Topic | Location |
 |-------|----------|
+| **AWS MCP Server (working demo)** | [mcp/AWS_MCP_WORKING.md](mcp/AWS_MCP_WORKING.md) |
 | AWS Strands vs Bedrock Agents | [AWS_Strands_vs_Bedrock_Agents_Medium.md](AWS_Strands_vs_Bedrock_Agents_Medium.md) |
 | HTTPS/TLS, cipher suites, OSI model | [securityReadme.md](securityReadme.md) |
 | OpenAPI specification guide | [OPENAPI_README.md](OPENAPI_README.md) |
