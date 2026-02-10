@@ -7,16 +7,6 @@ This repository contains practical implementations and technical documentation a
 ![GitHub forks](https://img.shields.io/github/forks/dipankar1415/share?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/dipankar1415/share?style=social)
 
-## Repository Statistics
-
-![Repo Stats](https://github-readme-stats.vercel.app/api/pin/?username=dipankar1415&repo=share&theme=radical&hide_border=true)
-
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=dipankar1415&repo=share&layout=compact&theme=radical&hide_border=true)
-
-## Activity Metrics
-
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=dipankar1415&show_icons=true&theme=radical&hide_border=true&include_all_commits=true)
-
 ## Repository Info
 
 ![Repo Size](https://img.shields.io/github/repo-size/dipankar1415/share)
