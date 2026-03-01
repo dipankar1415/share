@@ -188,7 +188,7 @@ legal-doc-automation/
 ├── document_generator.py  # PDF/DOCX generation
 ├── pdf_form_filler.py     # PDF form filling
 ├── pdf_converter.py       # PDF to template
-├── w7a_field_mapping.py   # Field name mappings
+├── field_mapping.py   # Field name mappings
 ├── templates/             # HTML & Jinja2 templates
 ├── pdf_templates/         # Uploaded PDF forms
 ├── static/                # CSS & JavaScript
@@ -208,17 +208,6 @@ legal-doc-automation/
 
 ---
 
-## Scripts
-
-| Script | Purpose |
-|--------|---------|
-| `clean_templates.py` | Delete all custom templates |
-| `create_w7a_template.py` | Create W-7A with proper field names |
-| `test_fill_pdf.py` | Test PDF form filling |
-| `test_preview.py` | Test preview generation |
-
----
-
 ## License
 
-MIT
+DipTech Corp.
